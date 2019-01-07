@@ -3,8 +3,8 @@
 <form action="/articles/<%=@article.id%>" method="POST">
   <input type="hidden" name="_method" value="PATCH">
   <label for="title">Title</label>
-  <input type="text" name="<%= @article.title %>" placeholder="title" id="title">
+  <input type="text" name="<%= @article.title %>" value="article.title" id="title">
   <label for="content">Content</label>
-  <input type="text" name="<%= @article.content %>" placeholder="article.content" id="title">
+  <input type="text" name="<%= @article.content %>" value="article.content" id="title">
   <input type="submit"  value="Edit Article">
 </form>
