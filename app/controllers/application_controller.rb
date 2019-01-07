@@ -29,6 +29,7 @@ class ApplicationController < Sinatra::Base
     else
       erb :'articles/new'
     end
+  end
 
     get '/articles/:id/edit' do
       #get params from url
