@@ -1,0 +1,10 @@
+<h1>Edit An Article</h1>
+
+<form action="/article/<%=@article.id%>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <label for="article[title]">Title</label>
+  <input type="text" name="article[title]" placeholder="title">
+  <label for="article[content]">Content</label>
+  <input type="text" name="article[content]" placeholder="content">
+  <input type="submit"  value="Edit Article">
+</form>
