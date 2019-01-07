@@ -27,7 +27,7 @@ class ApplicationController < Sinatra::Base
     if @article.save
       redirect "/articles/#{@article.id}"
     else
-      erb :'articles/new'
+      erb :new
     end
   end
 
@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
       #get params from url
       @article = Article.find(params[:id]) #define intstance variable for view
 
-      erb :'articles/edit' #show edit article view
+      erb :edit #show edit article view
     end
 
 
