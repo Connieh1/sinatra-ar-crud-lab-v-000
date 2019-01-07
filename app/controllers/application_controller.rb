@@ -30,10 +30,12 @@ class ApplicationController < Sinatra::Base
       erb :'articles/new'
     end
 
-    get '/articles/:id/edit'
-    @article = Article.find(params[:id])
-    erb :edit
-  end
+    get '/articles/:id/edit' do
+      #get params from url
+      @article = Article.find(params[:id]) #define intstance variable for view
+
+      erb :'articles/edit' #show edit article view
+    end
 
 
 
