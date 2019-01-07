@@ -53,7 +53,7 @@ class ApplicationController < Sinatra::Base
   @article.destroy #delete article
 
   redirect '/articles' #redirect back to articles index page
-
+end
 
 
 end
