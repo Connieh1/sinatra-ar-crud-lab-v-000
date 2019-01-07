@@ -36,15 +36,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id/edit' do
-    #get params from url
-    @article = Article.find(params[:id]) #define intstance variable for view
+    @article = Article.find(params[:id]) 
 
-    erb :edit #show edit article view
+    erb :edit 
   end
 
 
   patch '/articles/:id' do
-    # binding.pry
     @article = Article.find(params[:id])
     @article.update(params[:article])
     redirect to("/articles/#{@article.id}")
