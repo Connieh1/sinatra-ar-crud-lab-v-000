@@ -5,7 +5,7 @@
   <input type="submit" name="Delete Article" id="Submit">
 </form> -->
 
-<form action="/articles/<%=@article_object.id%>" method="post">
+<form action="/articles/<%=@article.id%>" method="post">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Article?">
 </form>
