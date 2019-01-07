@@ -1,10 +1,5 @@
 <h1>Delete An Article</h1>
 
-<!-- <form action="/articles/<%= @article.id %>" method="POST">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" name="Delete Article" id="Submit">
-</form> -->
-
 <form action="/articles/<%=@article.id%>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Article?">
