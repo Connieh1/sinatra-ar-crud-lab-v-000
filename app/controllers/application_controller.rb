@@ -45,15 +45,6 @@ class ApplicationController < Sinatra::Base
     redirect to("/articles/#{params[:id]}")
   end
 
-  delete '/articles/:id' do
-
-    #get params from url
-    @article = Article.find(params[:id]) #define article to delete
-
-    @article.destroy #delete article
-
-    redirect '/articles' #redirect back to articles index page
-  end
 
 
 end
