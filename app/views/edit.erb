@@ -2,9 +2,9 @@
 
 <form action="/article/<%=@article.id%>" method="POST">
   <input type="hidden" name="_method" value="PUT">
-  <label for="@article.title">Title</label>
-  <input type="text" name="<%= @article.title %>">
+  <label for="article[title]">Title</label>
+  <input type="text" name="<%= @article.title %>" value="title">
   <label for="article[content]">Content</label>
-  <input type="text" name="<%= @article.content %>">
+  <input type="text" name="<%= @article.content %>" value="content">
   <input type="submit"  value="Edit Article">
 </form>
