@@ -47,13 +47,13 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
 
-  #get params from url
-  @article = Article.find(params[:id]) #define article to delete
+    #get params from url
+    @article = Article.find(params[:id]) #define article to delete
+  
+    @article.destroy #delete article
 
-  @article.destroy #delete article
-
-  redirect '/articles' #redirect back to articles index page
-end
+    redirect '/articles' #redirect back to articles index page
+  end
 
 
 end
